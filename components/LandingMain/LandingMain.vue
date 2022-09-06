@@ -70,6 +70,7 @@ import VolumeWeights from '~/components/LandingMain/VolumeWeights.vue'
 import LandingMainDropDown from '~/components/LandingMain/LandingMainDropdown.vue'
 import LandingMainInfoTitle from '~/components/LandingMain/LandingMainInfoTitle.vue'
 import LandingMainPopularStores from '~/components/LandingMain/LandingMainPopularStores.vue'
+import LandingMainShops from '~/components/LandingMain/LandingMainShops.vue'
 
 export default {
   components: {
@@ -80,6 +81,7 @@ export default {
     LandingMainForwarding,
     LandingMainInfoTitle,
     LandingMainPopularStores,
+    LandingMainShops,
   },
   data: () => ({
     Departure: [
