@@ -58,6 +58,7 @@
       </div>
       <LandingMainServices />
       <LandingMainForwarding />
+      <LandingMainShops />
     </div>
   </main>
 </template>
