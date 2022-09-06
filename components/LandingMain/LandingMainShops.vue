@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="mt-20 mb-12">
     <div class="flex flex-col border p-6">
       <div
         v-for="shop in shops"
         :key="shop.id"
-        class="flex justify-between border-b py-6"
+        class="content flex justify-between border-b py-6"
       >
         <div class="flex gap-6 items-center z-50">
           <img :src="shop.img" class="z-50" alt="" />
@@ -37,3 +37,13 @@ export default {
   }),
 }
 </script>
+
+<style scoped>
+.content:first-of-type {
+  @apply pt-0 pb-6;
+}
+
+.content:last-of-type {
+  @apply border-0 pb-0;
+}
+</style>
