@@ -37,6 +37,7 @@
             <input class="bg-transparent w-80" />
             <img alt="" :src="require('@/static/img/akar-icons_pencil.svg')" />
           </div>
+          <!-- TODO: если у всего блока font-bold, то не лучше ли этот класс навесить всему блоку? -->
           <div class="flex justify-between items-center">
             <p class="font-bold text-lg leading-5">Пункт выдачи</p>
             <p class="font-bold text-lg leading-5">{{}} дней</p>

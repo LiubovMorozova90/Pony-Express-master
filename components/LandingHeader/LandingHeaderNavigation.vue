@@ -1,30 +1,18 @@
 <template>
   <div class="nav-content">
     <div class="nav-btn z-50">
-      <!-- TODO: переделай, чтобы ниже было не две кнопки открыть-закрыть, а одна, которая меняется в зависимости от текущего состояния -->
-      <!-- TODO: вынеси кнопку эту в компонент отдельный с пропсами для того чтобы обработать замечание выше -->
-      <button
-        v-if="isShown"
-        aria-label="Открыть меню"
-        class="btn-menu z-50"
-        @click="isShown = !isShown"
-      >
-        <img :src="require('@/static/img/close-menu.svg')" alt="" />
-      </button>
-      <button
-        v-else
-        aria-label="Закрыть меню"
-        class="btn-menu z-50"
-        @click="isShown = !isShown"
-      >
-        <img :src="require('@/static/img/burger-menu.svg')" alt="" />
-      </button>
+      <landing-header-button-navigation
+        :aria-label="isShown ? 'открыть меню' : 'закрыть меню'"
+        :btn-img-src="isShown ? 'close-menu.svg' : 'burger-menu.svg'"
+        @click.native="isShown = !isShown"
+      />
     </div>
     <!-- TODO: `v-if="show"` вот причина, по которой у тебя нифига не работает на десктопе -->
     <!-- TODO: разобраться как получать разрешение экрана через js, `v-if="show"` сделать, например, `v-if="show || isDesktop"` -->
     <div v-if="isShown" class="menu block">
       <ul v-for="nav in navigations" :key="nav.id" class="nav-text">
         <li class="navbar">
+          <!-- TODO: это строка, а должно свойство объекта писаться в href -->
           <a href="nav.link">{{ nav.title }}</a>
         </li>
       </ul>
