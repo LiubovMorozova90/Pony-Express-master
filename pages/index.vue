@@ -18,20 +18,17 @@
     </div>
     <Header></Header>
     <LandingMain></LandingMain>
-    <LandingFooter></LandingFooter>
   </div>
 </template>
 
 <script>
 import Header from '~/components/LandingHeader/LandingHeader.vue'
 import LandingMain from '~/components/LandingMain/LandingMain.vue'
-import LandingFooter from '~/components/LandingFooter/LandingFooter.vue'
 
 export default {
   components: {
     Header,
     LandingMain,
-    LandingFooter,
   },
 }
 </script>

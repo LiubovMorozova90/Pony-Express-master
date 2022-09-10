@@ -1,20 +1,28 @@
-<!-- 
 <template>
-  <button @click="isShown = !isShown" v-bind="isShown ? img :src="require('@/static/img/burger-menu.svg')" : img :src="require('@/static/img/close-menu.svg')" && isShown ? 'Закрыть меню' : 'Открыть меню'"
-class="btn-menu z-50" /> 
+  <button class="z-50" :aria-label="ariaLabel">
+    <img
+      v-if="btnImgSrc"
+      aria-hidden="true"
+      :alt="ariaLabel"
+      :src="require(`@/static/img/${btnImgSrc}`)"
+    />
+  </button>
 </template>
 
 <script>
 export default {
+  // TODO: общие компоненты просто кладутся в папку components-common и именуются как, например, TheButton
+  // TODO: ты же эту кнопку можешь использовать не только в header - так к чему в названии header или navigation
+
   props: {
-    navButton: {
+    btnImgSrc: {
+      type: String,
+      default: '',
+    },
+    ariaLabel: {
       type: String,
       default: '',
     },
   },
-  data: () => ({
-    isShown: false,
-  }),
 }
 </script>
--->
