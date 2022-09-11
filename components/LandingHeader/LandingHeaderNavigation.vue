@@ -1,7 +1,7 @@
 <template>
   <div class="nav-content">
     <div class="nav-btn z-50">
-      <landing-header-button-navigation
+      <TheButton
         :aria-label="isShown ? 'открыть меню' : 'закрыть меню'"
         :btn-img-src="isShown ? 'close-menu.svg' : 'burger-menu.svg'"
         @click.native="isShown = !isShown"
@@ -24,10 +24,10 @@
 </template>
 
 <script>
-import LandingHeaderButtonNavigation from '~/components/LandingHeader/LandingHeaderButtonNavigation.vue'
+import TheButton from '~/components/TheButton.vue'
 
 export default {
-  components: { LandingHeaderButtonNavigation },
+  components: { TheButton },
   data: () => ({
     navigations: [
       { link: '#', title: 'Адреса' },
