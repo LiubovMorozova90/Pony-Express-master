@@ -1,6 +1,7 @@
 <template>
   <div class="font-circe bg-main">
     <LandingHeaderNavigation />
+    <LandingMainShops />
   </div>
 </template>
 
