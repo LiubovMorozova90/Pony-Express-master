@@ -17,7 +17,9 @@
     </div>
     <div class="flex flex-col items-center z-50">
       <landing-main-slide />
-      <button class="btn text-white bg-lightgreen">Все магазины</button>
+      <nuxt-link to="/shop-list" class="btn block text-white bg-lightgreen"
+        >Все магазины</nuxt-link
+      >
     </div>
   </div>
 </template>

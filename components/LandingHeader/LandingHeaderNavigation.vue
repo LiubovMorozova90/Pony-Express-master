@@ -12,7 +12,6 @@
     <div v-if="isShown" class="menu block">
       <ul v-for="nav in navigations" :key="nav.id" class="nav-text">
         <li class="navbar">
-          <!-- TODO: это строка, а должно свойство объекта писаться в href -->
           <a href="nav.link">{{ nav.title }}</a>
         </li>
       </ul>
@@ -24,6 +23,7 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
 import TheButton from '~/components/TheButton.vue'
 
 export default {
@@ -38,6 +38,10 @@ export default {
       { link: '#', title: 'Доставка' },
     ],
     isShown: false,
+    screenWidth: '',
+    mounted() {
+      this.window.screen.width
+    },
   }),
 }
 </script>

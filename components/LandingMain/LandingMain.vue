@@ -37,16 +37,15 @@
             <input class="bg-transparent w-80" />
             <img alt="" :src="require('@/static/img/akar-icons_pencil.svg')" />
           </div>
-          <!-- TODO: если у всего блока font-bold, то не лучше ли этот класс навесить всему блоку? -->
-          <div class="flex justify-between items-center">
-            <p class="font-bold text-lg leading-5">Пункт выдачи</p>
-            <p class="font-bold text-lg leading-5">{{}} дней</p>
-            <p class="font-bold text-3xl leading-10">{{}} $</p>
+          <div class="flex justify-between items-center font-bold">
+            <p class="text-lg leading-5">Пункт выдачи</p>
+            <p class="text-lg leading-5">{{}} дней</p>
+            <p class="text-3xl leading-10">{{}} $</p>
           </div>
-          <div class="flex justify-between items-center">
-            <p class="font-bold text-lg leading-5">До двери</p>
-            <p class="font-bold text-lg leading-5">{{}} дней</p>
-            <p class="font-bold text-3xl leading-10">{{}} $</p>
+          <div class="flex justify-between items-center font-bold">
+            <p class="text-lg leading-5">До двери</p>
+            <p class="text-lg leading-5">{{}} дней</p>
+            <p class="text-3xl leading-10">{{}} $</p>
           </div>
           <button class="btn bg-lightgreen w-32">Подробнее</button>
           <p class="text-mass font-bold text-lg leading-5">
