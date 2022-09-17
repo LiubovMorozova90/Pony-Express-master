@@ -5,13 +5,18 @@
         class="main-text flex justify-between gap-10 items-center text-white pb-20 z-50"
       >
         <p class="title-text w-min">Популярные магазины</p>
-        <p class="text-t font-bold text-2xl leading-8 max-w-md">
+        <p
+          class="max-w-md text-[18px] leading-[24px] md:text-[26px] md:leading-[33px] font-bold text-white lg:text-black"
+        >
           Устройте шоппинг без границ в онлайн-магазинах СШA, Европы и Японии.
           Воспользуйтесь скидками, распродажами и выгодными предложениями от
           любимых брендов
         </p>
       </div>
-      <button class="btn btn-adress text-white border w-60 z-50">
+      <button
+        v-if="!isMobile"
+        class="btn btn-adress text-white border w-60 z-50"
+      >
         Получить адрес за рубежом
       </button>
     </div>
@@ -20,17 +25,26 @@
       <nuxt-link to="/shop-list" class="btn block text-white bg-lightgreen"
         >Все магазины</nuxt-link
       >
+      <button
+        v-if="isMobile"
+        class="mt-[16px] btn btn-adress text-white border w-60 z-50"
+      >
+        Получить адрес за рубежом
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 import LandingMainSlide from './LandingMainSlider.vue'
+import getScreenBreakpoint from '~/mixins/getScreenBreakpoint'
 
 export default {
   components: {
     LandingMainSlide,
   },
+
+  mixins: [getScreenBreakpoint],
 }
 </script>
 
@@ -55,10 +69,6 @@ export default {
   .btn-adress {
     @apply mb-6;
   }
-
-  .text-t {
-    @apply text-black;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -82,10 +92,6 @@ export default {
 @media (max-width: 440px) {
   .title-text {
     @apply text-3xl w-full;
-  }
-
-  .text-t {
-    @apply text-lg;
   }
 
   .btn {

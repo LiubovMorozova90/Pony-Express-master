@@ -1,18 +1,20 @@
 <template>
   <header class="header">
-    <div class="container block">
+    <div class="container">
       <the-header />
-      <div class="title flex flex-col justify-start pb-[100px]">
+      <div class="pb-[98px] flex flex-col justify-start">
         <p
-          class="text-title uppercase font-extrabold leading-23 text-7xl tracking-wide max-w-2xl mb-12"
+          class="mb-[12px] text-[28px] md:text-[88px] leading-[32px] md:leading-[93px] font-extrabold tracking-widest uppercase"
         >
-          зарубежный sale
+          зарубежный<br />sale
         </p>
-        <p class="text-t font-bold text-2xl max-w-xs mb-[180px]">
+        <p
+          class="max-w-[222px] md:max-w-[256px] mb-[184px] text-[18px] md:text-[26px] leading-[20px] md:leading-[29px] font-bold"
+        >
           Выгодные онлайн покупки за рубежом с быстрой доставкой
         </p>
         <button
-          class="btn relative text-xl leading-8 text-white bg-greenbasic max-w-xs z-30"
+          class="w-full md:max-w-[322px] px-4 py-2 font-bold text-center rounded-full relative md:text-xl leading-8 text-white bg-greenbasic z-30"
         >
           Получить адрес за рубежом
         </button>
@@ -38,86 +40,10 @@ export default {
   background-repeat: no-repeat;
 }
 
-.btn {
-  @apply font-bold text-center rounded-full px-4 py-2;
-}
-
-.container {
-  max-width: 1281px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1280px) {
-  .container {
-    max-width: 1100px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    max-width: 900px;
-  }
-}
-
-@media (max-width: 840px) {
-  .container {
-    max-width: 740px;
-  }
-}
-
 @media (max-width: 768px) {
   .header {
     background-size: 170%;
     background-position: 35% -22%;
-  }
-
-  .container {
-    max-width: 668px;
-  }
-
-  .text-title {
-    @apply text-5xl;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (max-width: 540px) {
-  .container {
-    max-width: 440px;
-  }
-}
-
-@media (max-width: 440px) {
-  .container {
-    max-width: 400px;
-  }
-
-  .text-title {
-    @apply text-3xl mb-3 w-52;
-  }
-
-  .text-t {
-    @apply text-lg leading-5 w-52;
-  }
-
-  .btn {
-    max-width: 100%;
-    font-size: 16px;
-  }
-
-  .title {
-    @apply pb-12;
-  }
-}
-
-@media (max-width: 395px) {
-  .container {
-    max-width: 350px;
   }
 }
 </style>

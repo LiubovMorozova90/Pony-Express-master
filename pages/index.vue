@@ -4,12 +4,12 @@
     <div class="relative">
       <landing-main />
       <div
-        class="absolute top-[-127rem] md:top-[-63rem] bottom-0 -left-52 -right-40"
+        class="absolute top-[-130rem] md:top-[-116rem] lg:top-[-83rem] xl:top-[-67rem] bottom-0 left-[-29rem] -right-40"
       >
         <div
           v-for="item in isMobile ? 3 : 6"
           :key="`bg-rectangle-${item}`"
-          class="absolute w-2050 h-800"
+          class="absolute w-[2500px] h-[900px] md:h-[1000px]"
           :style="getPaneStyle(item)"
         ></div>
       </div>
@@ -50,13 +50,13 @@ export default {
 
       const shadow = `${item % 2 ? '0px 4px 4px rgba(0, 0, 0, 0.25)' : 'none'}`
 
-      const rotate = `rotate(${item % 2 || this.isMobile ? -21 : 15}deg)`
+      const rotate = `rotate(${item % 2 || this.isMobile ? -22 : 22}deg)`
 
       const zIndex = `${item % 2 ? 1 : 0}`
 
       const top =
         this.isNotMobile || (this.isMobile && item < 3)
-          ? `${item * 11}%`
+          ? `${item * (this.isMobile ? 12 : 11)}%`
           : `${item * 15}%`
 
       return `transform: ${rotate}; top: ${top}; z-index: ${zIndex}; box-shadow: ${shadow}; background: ${background}`

@@ -1,10 +1,14 @@
 <template>
   <div class="flex flex-col lg:flex-row pt-12">
-    <img
-      alt=""
-      :src="require('@/static/img/mail-forwarding.png')"
-      class="lg:hidden xl:block xl:absolute right-0 z-30"
-    />
+    <div
+      class="lg:hidden xl:block xl:absolute right-0 max-h-[17rem] md:max-h-[40rem] xl:max-h-full flex z-30 overflow-hidden"
+    >
+      <img
+        alt=""
+        :src="require('@/static/img/mail-forwarding.png')"
+        class="w-full object-left-top object-cover"
+      />
+    </div>
     <div
       class="bg-main max-w-full bg-white relative z-50 max-w-3xl p-[20px] lg:py-12 lg:px-20 mt-8"
     >

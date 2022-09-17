@@ -4,7 +4,9 @@
       <LandingMainInfoTitle />
       <LandingMainPopularStores />
       <LandingMainMailForwarding />
-      <div class="content flex flex-col text-white pt-12 pb-28">
+      <div
+        class="mt-[100px] content flex flex-col text-black lg:text-white pb-28"
+      >
         <p class="title-text max-w-3xl mb-9 z-50">
           Рассчитайте стоимость доставки
         </p>
@@ -120,50 +122,25 @@ export default {
   @apply text-center rounded-full font-bold text-base leading-6 px-4 py-2;
 }
 
-.container {
-  max-width: 1281px;
-  margin: 0 auto;
-}
-
 @media (max-width: 1280px) {
-  .container {
-    max-width: 1100px;
-  }
-
   .section-weight {
     @apply ml-0;
   }
 }
 
 @media (max-width: 1024px) {
-  .container {
-    max-width: 900px;
-  }
-
-  .content {
-    @apply pt-32;
-  }
-
   .section-weight {
     @apply -mt-20;
   }
 }
 
 @media (max-width: 840px) {
-  .container {
-    max-width: 740px;
-  }
-
   .section-weight {
     @apply -mt-32;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
-    max-width: 668px;
-  }
-
   .section-main {
     @apply flex flex-col gap-8;
   }
@@ -177,17 +154,7 @@ export default {
   }
 }
 
-@media (max-width: 640px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
 @media (max-width: 540px) {
-  .container {
-    max-width: 440px;
-  }
-
   .title-text {
     @apply text-3xl leading-9;
   }
@@ -205,23 +172,9 @@ export default {
   }
 }
 
-@media (max-width: 440px) {
-  .container {
-    max-width: 400px;
-  }
-
-  .content {
-    @apply pt-48;
-  }
-}
-
 @media (max-width: 395px) {
   .container {
     max-width: 350px;
-  }
-
-  .content {
-    @apply pt-72;
   }
 }
 </style>

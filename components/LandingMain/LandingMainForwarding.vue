@@ -1,11 +1,16 @@
 <template>
   <div class="forwarding-main-text flex flex-col lg:flex-row gap-56">
-    <div class="section-img">
-      <img
-        alt=""
-        :src="require('@/static/img/main-forwarding-1.png')"
-        class="img-main relative z-20"
-      />
+    <div class="relative">
+      <div
+        class="relative z-20 w-full max-h-[17rem] md:max-h-[29rem] xl:max-h-full flex z-30 overflow-hidden"
+      >
+        <img
+          alt=""
+          :src="require('@/static/img/main-forwarding-1.png')"
+          class="w-full object-center object-cover"
+        />
+      </div>
+
       <img
         alt=""
         :src="require('@/static/img/main-forwarding-2.png')"
@@ -96,21 +101,9 @@ export default {
   .content {
     @apply relative w-full px-10 py-10;
   }
-
-  .section-img {
-    @apply relative;
-  }
-
-  .img-main {
-    @apply -mt-64 ml-20;
-  }
 }
 
 @media (max-width: 640px) {
-  .img-main {
-    @apply ml-5;
-  }
-
   .content {
     @apply -ml-12;
   }
@@ -124,25 +117,11 @@ export default {
   .btn {
     min-width: 100%;
   }
-
-  .img-main {
-    @apply -mt-40 ml-2;
-  }
 }
 
 @media (max-width: 440px) {
-  .img-main {
-    @apply mt-20 ml-0;
-  }
-
   .content {
     margin-left: -20px;
-  }
-}
-
-@media (max-width: 440px) {
-  .img-main {
-    @apply mt-28;
   }
 }
 </style>
