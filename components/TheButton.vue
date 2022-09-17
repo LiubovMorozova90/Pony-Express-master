@@ -1,5 +1,5 @@
 <template>
-  <button class="z-50" :aria-label="ariaLabel">
+  <button :aria-label="ariaLabel">
     <img
       v-if="btnImgSrc"
       aria-hidden="true"
@@ -16,6 +16,7 @@ export default {
       type: String,
       default: '',
     },
+
     ariaLabel: {
       type: String,
       default: '',

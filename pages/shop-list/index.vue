@@ -1,15 +1,7 @@
 <template>
   <div class="font-circe bg-main">
     <div class="container block">
-      <header>
-        <div class="flex justify-between gap-5">
-          <img
-            :src="require('@/static/img/header-navigation-logo.svg')"
-            alt=""
-          />
-          <LandingHeaderNavigation />
-        </div>
-      </header>
+      <the-header />
       <main class="pb-40">
         <p class="font-bold text-4xl leading-10 text-greenbasic mb-8">
           Список популярных зарубежных интернет-магазинов
@@ -46,13 +38,13 @@
 </template>
 
 <script>
-import LandingHeaderNavigation from '~/components/LandingHeader/LandingHeaderNavigation.vue'
+import TheHeader from '~/components/TheHeader'
 import LandingMainShops from '~/components/LandingMain/LandingMainShops.vue'
 import LandingMainDropdownVue from '~/components/LandingMain/LandingMainDropdown.vue'
 
 export default {
   components: {
-    LandingHeaderNavigation,
+    TheHeader,
     LandingMainShops,
     LandingMainDropdownVue,
   },

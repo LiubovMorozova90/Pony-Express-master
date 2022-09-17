@@ -1,5 +1,5 @@
 <template>
-  <div class="content flex pt-12 pb-4">
+  <div class="mt-5 flex pt-0 md:pt-12 pb-4">
     <img
       alt=""
       :src="require('@/static/img/info-forwarding-img.png')"
@@ -70,10 +70,6 @@ export default {
   .main-text {
     @apply absolute max-w-3xl mt-96 ml-96;
   }
-
-  .content {
-    @apply pb-96;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -128,10 +124,6 @@ export default {
 @media (max-width: 440px) {
   .main-text {
     @apply mt-72 px-14;
-  }
-
-  .content {
-    @apply mt-5 pt-0;
   }
 }
 </style>

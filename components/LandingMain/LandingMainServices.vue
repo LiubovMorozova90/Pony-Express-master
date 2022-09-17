@@ -1,6 +1,13 @@
 <template>
-  <div class="flex pt-12">
-    <div class="content bg-white absolute z-50 max-w-3xl py-12 px-20 mt-8">
+  <div class="flex flex-col lg:flex-row pt-12">
+    <img
+      alt=""
+      :src="require('@/static/img/mail-forwarding.png')"
+      class="lg:hidden xl:block xl:absolute right-0 z-30"
+    />
+    <div
+      class="bg-main max-w-full bg-white relative z-50 max-w-3xl p-[20px] lg:py-12 lg:px-20 mt-8"
+    >
       <p class="title-text mb-11">Услуги Mail Forwarding</p>
       <p class="font-bold text-2xl leading-7 mb-5">Основные услуги</p>
       <div
@@ -17,20 +24,15 @@
               >{{ service.remark }}</span
             >
           </div>
-          <div>
-            <span class="font-bold text-lg leading-7">{{ service.price }}</span>
-          </div>
+          <div class="font-bold text-lg leading-7">{{ service.price }}</div>
         </div>
       </div>
-      <button class="btn border text-greenbasic border-greenbasic mt-5">
+      <button
+        class="text-center rounded-full font-bold text-base leading-6 px-4 py-2 border text-greenbasic border-greenbasic mt-5"
+      >
         Получить адрес за рубежом
       </button>
     </div>
-    <img
-      alt=""
-      :src="require('@/static/img/mail-forwarding.png')"
-      class="main-img relative z-30 left-2/4 pl-8"
-    />
   </div>
 </template>
 
@@ -96,44 +98,13 @@ export default {
   @apply font-extrabold text-7xl tracking-wide;
 }
 
-.btn {
-  @apply text-center rounded-full font-bold text-base leading-6 px-4 py-2;
-}
-
-@media (max-width: 1024px) {
-  .content {
-    @apply bg-main max-w-2xl;
-  }
-}
-
-@media (max-width: 840px) {
-  .main-img {
-    @apply -mt-24 left-0 pl-0;
-  }
-
-  .content {
-    margin-top: 500px;
-    min-width: 740px;
-  }
-}
-
 @media (max-width: 768px) {
   .title-text {
     @apply text-5xl;
   }
-
-  .content {
-    margin-left: -36px;
-  }
 }
 
 @media (max-width: 640px) {
-  .content {
-    margin-top: 400px;
-    margin-left: -50px;
-    padding: 18px;
-  }
-
   .section-service {
     max-width: 600px;
   }
@@ -147,43 +118,18 @@ export default {
   .title-text {
     @apply text-3xl leading-9;
   }
-
-  .content {
-    margin-top: 340px;
-  }
-
-  .btn {
-    min-width: 500px;
-  }
 }
 
 @media (max-width: 440px) {
   .section-service {
     max-width: 400px;
   }
-
-  .content {
-    max-width: 440px;
-    padding-left: 40px;
-  }
-
-  .btn {
-    min-width: 420px;
-  }
 }
 
 @media (max-width: 395px) {
-  .content {
-    margin-top: 250px;
-  }
-
   .section-service {
     max-width: 375px;
     padding-right: 20px;
-  }
-
-  .btn {
-    min-width: 365px;
   }
 }
 </style>

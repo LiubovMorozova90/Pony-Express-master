@@ -1,34 +1,33 @@
 <template>
   <header class="header">
     <div class="container block">
-      <div class="flex justify-between gap-5">
-        <img :src="require('@/static/img/header-navigation-logo.svg')" alt="" />
-        <LandingHeaderNavigation />
-      </div>
-      <div class="title flex flex-col justify-start pb-20">
+      <the-header />
+      <div class="title flex flex-col justify-start pb-[100px]">
         <p
           class="text-title uppercase font-extrabold leading-23 text-7xl tracking-wide max-w-2xl mb-12"
         >
           зарубежный sale
         </p>
-        <p class="text-t font-bold text-2xl max-w-xs mb-44">
+        <p class="text-t font-bold text-2xl max-w-xs mb-[180px]">
           Выгодные онлайн покупки за рубежом с быстрой доставкой
         </p>
-        <button class="btn text-xl leading-8 text-white bg-greenbasic max-w-xs">
+        <button
+          class="btn relative text-xl leading-8 text-white bg-greenbasic max-w-xs z-30"
+        >
           Получить адрес за рубежом
         </button>
       </div>
-      <LandingHeaderBenefits />
+      <landing-header-benefits />
     </div>
   </header>
 </template>
 
 <script>
-import LandingHeaderNavigation from './LandingHeaderNavigation.vue'
 import LandingHeaderBenefits from './LandingHeaderBenefits.vue'
+import TheHeader from '~/components/TheHeader'
 
 export default {
-  components: { LandingHeaderNavigation, LandingHeaderBenefits },
+  components: { LandingHeaderBenefits, TheHeader },
 }
 </script>
 
@@ -36,6 +35,7 @@ export default {
 .header {
   background-image: url('static/img/header-fon.png');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .btn {
@@ -66,6 +66,11 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .header {
+    background-size: 170%;
+    background-position: 35% -22%;
+  }
+
   .container {
     max-width: 668px;
   }

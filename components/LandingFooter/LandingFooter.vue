@@ -1,8 +1,8 @@
 <template>
   <footer class="bg-black">
-    <div class="container block">
+    <div class="container">
       <div class="pt-12">
-        <div class="content flex justify-between">
+        <div class="flex flex-col md:flex-row justify-between">
           <div class="footer-main">
             <p class="footer-title">Компания</p>
             <LandingFooterCompany />
@@ -53,82 +53,5 @@ export default {
 
 .footer-title {
   @apply text-white font-bold text-xl leading-7 pb-5;
-}
-
-.footer-content {
-  @apply text-aluminum font-normal text-base leading-6;
-}
-
-.container {
-  max-width: 1281px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1280px) {
-  .container {
-    max-width: 1100px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    max-width: 900px;
-  }
-}
-
-@media (max-width: 840px) {
-  .container {
-    max-width: 740px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 668px;
-  }
-
-  footer {
-    margin-top: 600px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    max-width: 540px;
-  }
-
-  footer {
-    margin-top: 700px;
-  }
-
-  .content {
-    @apply flex flex-col;
-  }
-}
-
-@media (max-width: 540px) {
-  .container {
-    max-width: 440px;
-  }
-}
-
-@media (max-width: 440px) {
-  .container {
-    max-width: 400px;
-  }
-
-  footer {
-    margin-top: 800px;
-  }
-}
-
-@media (max-width: 395px) {
-  .container {
-    max-width: 350px;
-  }
-
-  footer {
-    margin-top: 900px;
-  }
 }
 </style>

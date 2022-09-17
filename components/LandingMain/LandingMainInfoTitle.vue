@@ -9,7 +9,7 @@
         адрес в любой город России
       </p>
     </div>
-    <div class="z-40 -ml-7 mr-8">
+    <div class="-ml-7 mr-8 z-0 md:z-40">
       <img
         alt=""
         :src="require('@/static/img/info-delivery-1.png')"

@@ -56,8 +56,8 @@
       <div class="section-weight relative z-50 pb-12 ml-28">
         <VolumeWeights class="z-50" @changeWeight="currentWeight = $event" />
       </div>
-      <LandingMainServices />
-      <LandingMainForwarding />
+      <LandingMainServices class="mb-[80px] md:mb-[198px]" />
+      <LandingMainForwarding class="mb-[40px] md:mb-[140px]" />
     </div>
   </main>
 </template>

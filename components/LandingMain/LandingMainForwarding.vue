@@ -1,5 +1,5 @@
 <template>
-  <div class="forwarding-main-text flex gap-56 mb-40">
+  <div class="forwarding-main-text flex flex-col lg:flex-row gap-56">
     <div class="section-img">
       <img
         alt=""
@@ -9,10 +9,10 @@
       <img
         alt=""
         :src="require('@/static/img/main-forwarding-2.png')"
-        class="img-hidden absolute z-30 -mt-52 ml-32"
+        class="hidden xl:block absolute z-30 -mt-52 ml-32"
       />
     </div>
-    <div class="content flex flex-col bg-main w-1/2 z-50">
+    <div class="content flex flex-col bg-main w-full lg:w-1/2 z-50">
       <p class="title-text mb-11">
         Доставка из США, Европы и Японии с PONY EXPRESS
       </p>
@@ -74,10 +74,6 @@ export default {
   padding-right: 12px;
 }
 
-.forwarding-main-text {
-  padding-top: 650px;
-}
-
 .title-text {
   @apply font-extrabold text-7xl tracking-wide;
 }
@@ -87,18 +83,8 @@ export default {
 }
 
 @media (max-width: 1024px) {
-  .img-hidden {
-    @apply hidden;
-  }
-
   .forwarding-main-text {
     @apply gap-16;
-  }
-}
-
-@media (max-width: 840px) {
-  .forwarding-main-text {
-    margin-top: 500px;
   }
 }
 
@@ -108,7 +94,7 @@ export default {
   }
 
   .content {
-    @apply absolute w-full px-10 py-10 mt-72;
+    @apply relative w-full px-10 py-10;
   }
 
   .section-img {
@@ -150,7 +136,6 @@ export default {
   }
 
   .content {
-    margin-top: 500px;
     margin-left: -20px;
   }
 }

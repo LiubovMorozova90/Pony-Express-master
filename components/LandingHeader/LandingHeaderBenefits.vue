@@ -1,19 +1,19 @@
 <template>
-  <div class="content flex justify-between items-start pb-32">
+  <div
+    class="relative w-full pb-0 md:pb-32 flex flex-col lg:flex-row justify-between items-start z-50"
+  >
     <div
       v-for="(benefit, index) in benefits"
-      :key="`benefit-${index}`"
-      class="title flex gap-4 w-1/4 z-50"
+      :key="index"
+      class="w-full lg:w-1/4 mb-[51px] lg:mb-0 flex justify-evenly gap-[20px]"
     >
-      <div class="w-22 h-22">
-        <img :src="benefit.img" class="z-50" alt="" />
-      </div>
+      <img :src="benefit.img" class="w-22 h-22" :alt="benefit.title" />
       <div class="flex flex-col">
         <span
-          class="flex flex-col font-bold text-2xl leading-7 mb-3"
+          class="flex flex-col font-bold text-2xl leading-7"
           v-html="benefit.title"
         />
-        <span class="t-t font-normal text-lg leading-6 max-w-xs">{{
+        <span class="mt-[12px] font-normal text-[18px] leading-[27px]">{{
           benefit.description
         }}</span>
       </div>
@@ -47,63 +47,3 @@ export default {
   }),
 }
 </script>
-
-<style scoped>
-@media (max-width: 840px) {
-  .title {
-    @apply gap-2;
-  }
-}
-
-@media (max-width: 640px) {
-  .content {
-    @apply flex flex-col w-full;
-  }
-
-  .title {
-    font-size: 26px;
-    line-height: 29px;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .t-t {
-    margin-bottom: 50px;
-  }
-}
-
-@media (max-width: 540px) {
-  .container {
-    max-width: 440px;
-  }
-}
-
-@media (max-width: 440px) {
-  .container {
-    max-width: 400px;
-  }
-
-  .text-title {
-    @apply text-3xl mb-3 w-52;
-  }
-
-  .text-t {
-    @apply text-lg leading-5 w-52;
-  }
-
-  .btn {
-    max-width: 100%;
-    font-size: 16px;
-  }
-
-  .title {
-    @apply pb-12;
-  }
-}
-
-@media (max-width: 390px) {
-  .container {
-    max-width: 350px;
-  }
-}
-</style>
